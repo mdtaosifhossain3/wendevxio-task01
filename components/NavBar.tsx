@@ -1,15 +1,13 @@
-import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 
 const NavBar = () => {
-  const [activeSection, setActiveSection] = useState("home");
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   // Scroll to section
-  const scrollToSection = (sectionId: any) => {
+  const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -24,9 +22,7 @@ const NavBar = () => {
             <li
               key={item}
               onClick={() => scrollToSection(item.toLowerCase())}
-              className={` cursor-pointer flex flex-col md:flex-row gap-12 mt-4 md:mt-0  text-xl hover:text-blue-600 transition-colors ${
-                activeSection === item.toLowerCase() ? "text-blue-600" : ""
-              }`}
+              className={` cursor-pointer flex flex-col md:flex-row gap-12 mt-4 md:mt-0  text-xl hover:text-blue-600 transition-colors `}
             >
               {item}
             </li>
@@ -64,9 +60,7 @@ const NavBar = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className={`font-medium hover:text-blue-600 transition-colors py-2 ${
-                  activeSection === item.toLowerCase() ? "text-blue-600" : ""
-                }`}
+                className={`font-medium hover:text-blue-600 transition-colors py-2 `}
               >
                 {item}
               </button>

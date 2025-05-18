@@ -1,9 +1,4 @@
 "use client";
-import Image from "next/image";
-import { useState } from "react";
-import { motion } from "framer-motion";
-import Head from "next/head";
-import { ArrowUpRight, ChevronRight, Menu, X } from "lucide-react";
 import FAQPage from "@/components/faq";
 import Footer from "@/components/footer";
 import TestimonialsSection from "@/components/testimonia";

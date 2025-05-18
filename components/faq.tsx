@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Phone, ChevronRight, MessageSquare, PenLine } from "lucide-react";
 
 export default function FAQPage() {
-  const [expandedFAQ, setExpandedFAQ] = useState(null);
+  const [expandedFAQ, setExpandedFAQ] = useState<string | null>(null);
 
   const faqs = [
     {
@@ -31,7 +31,7 @@ export default function FAQPage() {
     },
   ];
 
-  const toggleFAQ = (id: any) => {
+  const toggleFAQ = (id: string | null) => {
     setExpandedFAQ(expandedFAQ === id ? null : id);
   };
 
@@ -48,7 +48,7 @@ export default function FAQPage() {
               <span className="text-blue-500 mx-2">question?</span>
             </div>
             <div>
-              <span className="text-black">We've got </span>
+              <span className="text-black">We have got </span>
               <span className="text-blue-500">answer.</span>
             </div>
           </div>
