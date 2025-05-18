@@ -1,70 +1,83 @@
-import { useState } from 'react';
-import { Phone, ChevronRight, MessageSquare, PenLine } from 'lucide-react';
+import { useState } from "react";
+import { Phone, ChevronRight, MessageSquare, PenLine } from "lucide-react";
 
 export default function FAQPage() {
   const [expandedFAQ, setExpandedFAQ] = useState(null);
-  
+
   const faqs = [
     {
-      id: '01',
-      question: 'What services does UX Recharge offer?',
-      answer: 'We specialize in designing and developing high-converting websites for SaaS companies.'
+      id: "01",
+      question: "What services does UX Recharge offer?",
+      answer:
+        "We specialize in designing and developing high-converting websites for SaaS companies.",
     },
     {
-      id: '02',
-      question: 'Do you only work with SaaS companies?',
-      answer: 'While we specialize in SaaS companies, we also work with select businesses in other industries that align with our expertise in creating conversion-focused digital experiences.'
+      id: "02",
+      question: "Do you only work with SaaS companies?",
+      answer:
+        "While we specialize in SaaS companies, we also work with select businesses in other industries that align with our expertise in creating conversion-focused digital experiences.",
     },
     {
-      id: '03',
-      question: 'How long does it take to build a SaaS website?',
-      answer: 'Our typical timeline for a comprehensive SaaS website is 6-8 weeks, depending on the complexity and scope of the project. We follow a structured process that includes discovery, design, development, and testing phases.'
+      id: "03",
+      question: "How long does it take to build a SaaS website?",
+      answer:
+        "Our typical timeline for a comprehensive SaaS website is 6-8 weeks, depending on the complexity and scope of the project. We follow a structured process that includes discovery, design, development, and testing phases.",
     },
     {
-      id: '04',
-      question: 'What tools do you use for development?',
-      answer: 'We use modern frameworks like React, Next.js, and Tailwind CSS for frontend development. For backend solutions, we leverage technologies like Node.js, Firebase, and various headless CMS options depending on client needs.'
-    }
+      id: "04",
+      question: "What tools do you use for development?",
+      answer:
+        "We use modern frameworks like React, Next.js, and Tailwind CSS for frontend development. For backend solutions, we leverage technologies like Node.js, Firebase, and various headless CMS options depending on client needs.",
+    },
   ];
 
-  const toggleFAQ = (id:any) => {
-   
+  const toggleFAQ = (id: any) => {
     setExpandedFAQ(expandedFAQ === id ? null : id);
   };
 
   return (
-    <div className=" font-sans">
+    <div id="faq" className=" font-sans">
       <div className="max-w-6xl mx-auto p-6">
         <div className="mb-10">
-          <div className="text-sm text-blue-500 mb-2">—FAQ</div>
-          <div className="text-4xl font-bold flex items-center">
-            <span className="text-black">Got </span>
-            <span className="text-blue-500 mx-2">question?</span>
-            <span className="text-black">We've got </span>
-            <span className="text-blue-500">answer.</span>
+          <div className="text-sm text-blue-500 mb-2 text-center md:text-left">
+            —FAQ
+          </div>
+          <div className="text-4xl font-bold flex flex-col items-center md:flex-row">
+            <div>
+              <span className="text-black">Got </span>
+              <span className="text-blue-500 mx-2">question?</span>
+            </div>
+            <div>
+              <span className="text-black">We've got </span>
+              <span className="text-blue-500">answer.</span>
+            </div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 space-y-4">
             {faqs.map((faq) => (
-              <div 
+              <div
                 key={faq.id}
                 className={`rounded-xl border transition-all duration-300 overflow-hidden ${
-                  expandedFAQ === faq.id ? 'shadow-md' : 'shadow-sm bg-white'
+                  expandedFAQ === faq.id ? "shadow-md" : "shadow-sm bg-white"
                 }`}
               >
-                <div 
+                <div
                   className="flex items-center justify-between p-6 cursor-pointer"
                   onClick={() => toggleFAQ(faq.id)}
                 >
                   <div className="flex items-start gap-4">
-                    <div className="text-2xl font-bold text-blue-600">{faq.id}</div>
+                    <div className="text-2xl font-bold text-blue-600">
+                      {faq.id}
+                    </div>
                     <div className="font-medium text-lg">{faq.question}</div>
                   </div>
-                  <div className={`bg-gray-800 rounded-full p-2 transition-transform ${
-                    expandedFAQ === faq.id ? "bg-blue-600" : ""
-                  }`}>
+                  <div
+                    className={`bg-gray-800 rounded-full p-2 transition-transform ${
+                      expandedFAQ === faq.id ? "bg-blue-600" : ""
+                    }`}
+                  >
                     <ChevronRight size={20} className="text-white" />
                   </div>
                 </div>
@@ -85,9 +98,12 @@ export default function FAQPage() {
                 </div>
               </div>
 
-              <h3 className="text-2xl font-bold text-center mb-2">You have different question?</h3>
+              <h3 className="text-2xl font-bold text-center mb-2">
+                You have different question?
+              </h3>
               <p className="text-center text-blue-100 mb-8">
-                Our team will answer all your question,<br />
+                Our team will answer all your question,
+                <br />
                 we ensure a quick response
               </p>
 
@@ -105,7 +121,9 @@ export default function FAQPage() {
                   <Phone size={24} className="text-blue-600" />
                 </div>
                 <div>
-                  <p className="text-gray-600 text-sm">Your comfort our priority</p>
+                  <p className="text-gray-600 text-sm">
+                    Your comfort our priority
+                  </p>
                   <h3 className="font-bold text-xl">24/7 Service</h3>
                   <p className="text-gray-600">+(000)000000000</p>
                 </div>
