@@ -7,7 +7,7 @@ const BrandSection = () => {
       <p className="text-center text-2xl md:text-4xl font-semibold pb-6">
         Already <span className="text-[#274AFF]">Chosen</span> by the leaders
       </p>
-      <div className="bg-[#E0E6FF] text-black flex flex-wrap justify-evenly gap-8 py-7 text-lg">
+      <div className="bg-[#E0E6FF] text-black flex flex-wrap justify-evenly gap-8 py-7 text-lg ">
         <Image alt="" src={"/slack.png"} width={129} height={52} />
         <Image alt="" src={"/leadhuntio.png"} width={196} height={36} />
         <Image alt="" src={"/heap.png"} width={109} height={36} />

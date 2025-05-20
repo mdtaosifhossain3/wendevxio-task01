@@ -1,8 +1,9 @@
 import React from "react";
+import Button from "./Button";
 
 const HeroSection = () => {
   return (
-    <div className=" max-w-[1440px] mx-auto min-h-[650] flex flex-col justify-center items-center">
+    <div className=" hero_body max-w-[1440px] mx-auto min-h-[650] flex flex-col justify-center items-center pt-24 ">
       <p className="text-[#274AFF] font-bold text-3xl md:text-5xl leading-snug pb-6 max-w-[840px] text-center">
         Pixel-Perfect UI/UX Design for a <br className="hidden md:block" />{" "}
         Seamless User Experience

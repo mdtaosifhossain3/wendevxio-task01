@@ -24,3 +24,97 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.abc {
+  font-size: large;
+  position: relative;
+}
+
+.abc::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #274aff45;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+
+  right: -20px;
+  top: 12px;
+}
+
+.abc_home {
+  font-size: large;
+  position: relative;
+  z-index: 1;
+}
+
+.abc_home::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #274aff;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+
+  right: -20px;
+  top: 12px;
+}
+
+.abc_home::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center behind text */
+
+  width: 190%; /* Slightly larger than text */
+  height: 120%;
+  background: #274aff;
+
+  border-radius: 50%;
+  z-index: -1; /* Behind the text */
+  filter: blur(20px); /* Blur effect */
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/Hero_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -1; /* Place it behind the content */
+}
+
+.hero_body {
+  position: relative;
+  z-index: 1;
+}
+
+.hero_body::before {
+  content: "";
+  position: absolute;
+  top: 6%;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-image: url("/Heroframe.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -1; /* Place it behind the content */
+}
