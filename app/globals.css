@@ -118,3 +118,73 @@ body {
   opacity: 0.3;
   z-index: -1; /* Place it behind the content */
 }
+
+.bga1 {
+  position: relative;
+  z-index: 0; /* base level */
+  width: 288px;
+  height: 219px;
+  overflow: hidden; /* optional: hide overflow */
+}
+
+/* Red box BELOW image */
+.bga1::before {
+  content: "";
+  position: absolute;
+  top: -90%; /* move below */
+  left: -10000%;
+  width: 100%;
+  height: 60%;
+  background-color: red;
+  z-index: 0; /* behind image */
+}
+
+/* Image ABOVE red box */
+.bga1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/about-image-1.png");
+  width: 288px;
+  height: 219px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1; /* on top of red box */
+}
+
+.bga2 {
+  background-image: url("/about-image-2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bga3 {
+  background-image: url("/about-image-3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bga4 {
+  background-image: url("/about-image-4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bga4::before {
+  content: "";
+  position: absolute;
+  top: -38%;
+  right: 40%;
+  width: 40%;
+  height: 60%;
+  background-image: url("/icon.png");
+  background-size: contain; /* Fit icon */
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}

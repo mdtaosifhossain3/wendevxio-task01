@@ -7,7 +7,20 @@ const About = () => {
       id="about"
       className="px-12 py-14 flex flex-col lg:flex-row  justify-center items-center gap-16 h-[50%]"
     >
-      <Image alt="about" src={"/about.png"} width={500} height={500} />
+      <div className="">
+        <div className="min-h-[442] min-w-[482]    space-y-6 ">
+          <div className=" flex gap-6">
+            <div className=" bga1   rounded-tl-[99px]" />
+            <div className="bga2   w-[138px] h-[219px] rounded-tr-[99px] " />
+          </div>
+          <div className=" flex gap-6">
+            <div className="bga3  w-[184px] h-[169px] rounded-bl-[69px]" />
+            <div className="bga4 w-[242px] h-[169px] rounded-br-[99px] " />
+          </div>
+        </div>
+      </div>
+
+      {/* <Image alt="about" src={"/about.png"} width={500} height={500} /> */}
 
       <div className="max-w-xl">
         <h2 className="font-bold pb-2 text-lg">__ About US</h2>
